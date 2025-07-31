@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+include 'database.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("ss", $email, $password);
 
     if ($stmt->execute()) {
-        echo "Registration successful. You can now <a href='login.html'>login</a>.";
+        echo "Registration successful. You can now <a href='../views/login.php'>login</a>.";
     } else {
         echo "Error: " . $stmt->error;
     }

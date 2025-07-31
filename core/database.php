@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'sms_db';
+$database = 'stms_db';
 
 //database connection
 $conn = mysqli_connect($host, $username, $password, $database);

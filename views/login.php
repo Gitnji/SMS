@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="/core/login.php" method="POST">
+        <form action="../core/login.php" method="POST">
             <input type="text" name="email" placeholder="email" required><br>
             <input type="password" name="password" placeholder="Password" required><br>
             <button type="submit">Login</button>

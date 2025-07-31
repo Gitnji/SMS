@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database.php';
+include 'database.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($result->num_rows > 0) {
         $_SESSION['email'] = $email;
-        header("Location: dashboard.php");
+        header("Location: ../views/student_dashboard.php");
         exit;
     } else {
         echo "Invalid username or password.";
