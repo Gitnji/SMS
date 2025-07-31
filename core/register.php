@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Prepare and execute SQL statement
+    $role = 'student'; // Default role
     $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
     $stmt->bind_param("ss", $email, $password);
 

@@ -1,4 +1,4 @@
-<!-- views/student_dashboard.php -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +15,8 @@
         <h2>Welcome, Student</h2>
         <p>Here are your enrolled courses and actions you can perform.</p>
         <!-- Sample Buttons -->
-        <button>View My Courses</button>
-        <button>Logout</button>
+        <a><button>View My Courses</button></a>
+        <a href="../views/login.php"><button>Logout</button></a>
     </div>
 </body>
 </html>

@@ -18,7 +18,7 @@
         <button>Enroll Student</button>
         <button>Delete Student</button>
         <button>Delete Course</button>
-        <button>Logout</button>
+        <a href="../views/login.php"><button>Logout</button></a>
     </div>
 </body>
 </html>

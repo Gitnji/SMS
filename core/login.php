@@ -2,6 +2,8 @@
 session_start();
 include 'database.php';
 
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -19,10 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $_SESSION['email'] = $email;
-        header("Location: ../views/student_dashboard.php");
-        exit;
-    } else {
-        echo "Invalid username or password.";
+        $user = $result->fetch_assoc();
+        if ($password === $user['password']) {
+            $_SESSION['email'] = $email;
+            $_SESSION['role'] = $user['role'];
+            if ($_SESSION['role'] === 'admin') {
+                header("Location: ../views/admin_dashboard.php");
+            } else {
+                header("Location: ../views/student_dashboard.php");
+            }
+            exit;
+        }
+        else {
+            echo "Invalid email or password.";
+        }
     }
 }
