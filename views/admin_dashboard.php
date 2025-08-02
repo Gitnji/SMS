@@ -83,7 +83,7 @@ switch($method){
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>
-                    <a href='/'><button>update</button></a>
+                    <a href='../models/admin/updating.php'><button>update</button></a>
                     <a href='../models/admin/delete.php'><button>delete</button></a>
                     </td>";
                     echo "</tr>";

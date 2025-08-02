@@ -1,4 +1,4 @@
-<!-- views/signup.php -->
+
 <!DOCTYPE html>
 <html>
 <head>
