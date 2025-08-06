@@ -61,15 +61,15 @@ switch($method){
 <body>
     <div class="container">
         <h2>Welcome, Admin</h2>
-        <a><p>Admin functionalities:</p></a>
-        <a><button>Assign Course</button></a>
         <a href="../views/register.php"><button>Add Student</button></a>
         <a><button>Delete Student</button></a>
         <a><button>Delete Course</button></a>
          <a><button>View Course</button></a>
+        <a><button>View Student</button></a>
+        <a><button>View enrollments</button></a>
         <a href="../views/login.php"><button>Logout</button></a>
         <div class="table">
-          <p><h3>Table of Students</h3></p>
+          <p><h3>Table of users</h3></p>
             <table border="1" style="width: 100%; text-align: left; margin-top: 20px;">
                 <tr>
                     <th>ID</th>
@@ -83,8 +83,8 @@ switch($method){
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . $row['email'] . "</td>";
                     echo "<td>
-                    <a href='../models/admin/updating.php'><button>update</button></a>
-                    <a href='../models/admin/delete.php'><button>delete</button></a>
+                    <a href='../models/admin/update.php?id=" . $row['id'] . "'><button>update</button></a>
+                    <a href='../models/admin/delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure?');\"><button>delete</button></a>
                     </td>";
                     echo "</tr>";
                 }

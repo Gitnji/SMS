@@ -18,7 +18,7 @@
             <input type="password" name="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
-        <p>Don't have an account? <a href="../views/register.html">Sign up</a></p>
+        <p>Don't have an account? <a href="/SMS/sms/views/register.php">Sign up</a></p>
     </div>
 </body>
 </html>
