@@ -17,7 +17,7 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
     <div class="container">
         <h2>Welcome, Admin</h2>
         <a href="../views/register.php"><button>Add Student</button></a>
-        <a href="../views/admin_dashboard.php"><button>Back</button></a>
+        <a href="/SMS/sms-1/views/admin_dashboard.php"><button>Back</button></a>
         <div class="table">
           <p><h3>Table of users</h3></p>
             <table border="1" style="width: 100%; text-align: left; margin-top: 20px;">

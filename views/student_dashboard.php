@@ -13,9 +13,8 @@
 <body>
     <div class="container">
         <h2>Welcome, Student</h2>
-        <p>Here are your enrolled courses and actions you can perform.</p>
-        <!-- Sample Buttons -->
         <a><button>View My Courses</button></a>
+        <a href=""><button>check my grades</button></a>
         <a href="../views/login.php"><button>Logout</button></a>
     </div>
 </body>
