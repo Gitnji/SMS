@@ -5,7 +5,7 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>View Course</title>
+    <title>View Students</title>
     <style>
         body { font-family: Arial; background: #f4f4f4; }
         .container { width: 80%; margin: auto; padding: 20px; background: #fff; margin-top: 50px; border-radius: 8px; }
@@ -16,7 +16,7 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
 <body>
     <div class="container">
         <h2>Welcome, Admin</h2>
-        <a href="../models/addcourse.php"><button>Add Course</button></a>
+        <a href="../views/register.php"><button>Add Student</button></a>
         <a href="../views/admin_dashboard.php"><button>Back</button></a>
         <div class="table">
           <p><h3>Table of users</h3></p>
@@ -27,14 +27,15 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
                     <th>Edit</th>
                 </tr>
                 <?php
-                $result = $conn->query("SELECT * FROM courses ");
+                $result = $conn->query("SELECT * FROM users WHERE role = 'student'");
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
-                    echo "<td>" . $row['course_name'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
                     echo "<td>
                     <a href='../models/admin/update.php?id=" . $row['id'] . "'><button>update</button></a>
                     <a href='../models/admin/delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure?');\"><button>delete</button></a>
+                    <a href='../models/admin/update.php?id=" . $row['id'] . "'><button>Give Course</button></a>
                     </td>";
                     echo "</tr>";
                 }

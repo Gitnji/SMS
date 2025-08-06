@@ -62,10 +62,8 @@ switch($method){
     <div class="container">
         <h2>Welcome, Admin</h2>
         <a href="../views/register.php"><button>Add Student</button></a>
-        <a><button>Delete Student</button></a>
-        <a><button>Delete Course</button></a>
-         <a><button>View Course</button></a>
-        <a><button>View Student</button></a>
+         <a href="../models/course.php"><button>View Course</button></a>
+        <a href="../models/student/view.php"><button>View Students</button></a>
         <a><button>View enrollments</button></a>
         <a href="../views/login.php"><button>Logout</button></a>
         <div class="table">
