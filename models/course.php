@@ -19,11 +19,11 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
         <a href="../models/addcourse.php"><button>Add Course</button></a>
         <a href="../views/admin_dashboard.php"><button>Back</button></a>
         <div class="table">
-          <p><h3>Table of users</h3></p>
+          <p><h3>Table of Courses</h3></p>
             <table border="1" style="width: 100%; text-align: left; margin-top: 20px;">
                 <tr>
                     <th>ID</th>
-                    <th>Email</th>
+                    <th>Courses</th>
                     <th>Edit</th>
                 </tr>
                 <?php

@@ -19,7 +19,7 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
         <a href="../views/register.php"><button>Add Student</button></a>
         <a href="/SMS/sms-1/views/admin_dashboard.php"><button>Back</button></a>
         <div class="table">
-          <p><h3>Table of Students</h3></p>
+          <p><h3>Table of users</h3></p>
             <table border="1" style="width: 100%; text-align: left; margin-top: 20px;">
                 <tr>
                     <th>ID</th>
@@ -35,6 +35,7 @@ include 'C:/xampp/htdocs/SMS/SMS-1/core/database.php';
                     echo "<td>
                     <a href='../models/admin/update.php?id=" . $row['id'] . "'><button>update</button></a>
                     <a href='../models/admin/delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure?');\"><button>delete</button></a>
+                    <a href='../models/admin/update.php?id=" . $row['id'] . "'><button>Give Course</button></a>
                     </td>";
                     echo "</tr>";
                 }
